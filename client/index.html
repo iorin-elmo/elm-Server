@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="./head.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>Elm-Twitter</title>
+</head>
+<body>
+<pre>
+<code>
+  <main/></main>
+</code>
+</pre>
+  <script src="client.js"></script>
+  <script type="text/javascript">
+    const app =
+      Elm.Client.init({
+        node: document.querySelector('main'),
+        flags: "localhost:25555"
+      });
+
+    app.ports.changeTitle.subscribe(function(newTitle){
+      document.title = newTitle;
+    });
+  </script>
+
+</body>
+</html>
